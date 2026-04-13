@@ -1,43 +1,37 @@
-# Spam Review Filter
+# Installation Instructions
 
-## Description
-Spam Review Filter is a project designed to identify and filter out spam reviews from online platforms. This tool uses advanced algorithms to detect patterns of spammy content and ensures that genuine reviews stand out, improving the quality of feedback on products and services.
+## Java Backend
+To set up the Java backend, follow these steps:
 
-## Features
-- **Spam Detection:** Utilizes machine learning algorithms to detect spam reviews.
-- **User-Friendly Interface:** Easy to navigate interface for users to view and manage reviews.
-- **Customizable Settings:** Allow users to tweak filters and settings based on their needs.
-- **Reporting Tools:** Provides analytics to understand spam trends and patterns.
-
-## Installation
-To install the Spam Review Filter, follow these steps:
-1. Clone the repository:
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/krParvesh/SpamReviewFilter.git
-   ```
-2. Navigate to the project directory:
-   ```bash
    cd SpamReviewFilter
    ```
-3. Install the required dependencies:
+
+2. **Install Maven**:
+   Make sure you have Maven installed. You can download it from [Maven's official site](https://maven.apache.org/download.cgi).
+
+3. **Build the project**:
    ```bash
-   npm install
+   mvn clean install
    ```
 
-## Usage
-To use the Spam Review Filter, run the following command:
-```bash
-npm start
-```
+4. **Run the application**:
+   ```bash
+   mvn spring-boot:run
+   ```
 
-Once the application is running, navigate to `http://localhost:3000` to access the interface.
+## Chrome Extension
+To set up the Chrome extension, follow these steps:
 
-## Contribution Guidelines
-We welcome any contributions to improve the Spam Review Filter! To contribute, please follow these steps:
-1. Fork the repo.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make your changes and commit them (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Open a pull request.
+1. **Download the extension source code**:
+   Clone the repository as mentioned above, if you haven't already.
 
-Thank you for your interest in contributing!
+2. **Load the unpacked extension in Chrome**:
+   - Open Chrome and navigate to `chrome://extensions/`
+   - Enable "Developer mode" at the top right corner.
+   - Click on "Load unpacked" and select the `extension` directory within the cloned repository.
+
+3. **Using the extension**:
+   - Follow any additional setup instructions provided in the `extension` directory if available.
