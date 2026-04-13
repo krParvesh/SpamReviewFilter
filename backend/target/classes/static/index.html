@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Review Checker</title>
+</head>
+<body>
+ <h2>Review Spam Checker</h2>
+ <textarea id="review" rows="4" cols="50"></textarea><br><br>
+ <button onclick="checkReview()">Check</button>
+ <p id="result"></p>
+
+ <script>
+ function checkReview() {
+   const review = document.getElementById("review").value;
+
+   fetch("http://localhost:8080/reviews/check", {
+     method: "POST",
+     headers: { "Content-Type": "application/json" },
+     body: JSON.stringify({ review })
+   })
+   .then(res => res.json())
+   .then(data => {
+     document.getElementById("result").innerText =
+       data.spam ? "Spam detected 🚫" : "Genuine review ✅";
+   });
+ }
+ </script>
+</body>
+</html>
